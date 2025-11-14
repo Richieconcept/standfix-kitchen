@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add / Edit Menu Item - Standfix Kitchen</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0, 121, 26, 0.15);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #216f00;
+      border: none;
+      padding: 10px 18px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .back-btn {
+      margin-top: 15px;
+      background: gray;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1 id="pageTitle">Add New Menu Item</h1>
+
+  <form id="menuForm">
+    <input type="text" id="title" placeholder="Menu Title" required>
+    <textarea id="description" placeholder="Short description" required></textarea>
+
+    <label>Image (800x600 recommended):</label>
+    <input type="file" id="imageFile">
+
+    <button type="submit">Save Item</button>
+  </form>
+
+  <button class="back-btn" onclick="goBack()">← Back to Dashboard</button>
+
+  <script type="module">
+    import { db, storage } from "../firebase.js";
+    import {
+      doc, setDoc, getDoc
+    } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    import {
+      ref, uploadBytes, getDownloadURL
+    } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const editId = urlParams.get("id");
+
+    const titleEl = document.getElementById("title");
+    const descEl = document.getElementById("description");
+    const imageFile = document.getElementById("imageFile");
+    const pageTitle = document.getElementById("pageTitle");
+
+    // If editing, fetch data
+    if (editId) {
+      pageTitle.innerText = "Edit Menu Item";
+
+      const docRef = doc(db, "menu", editId);
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        titleEl.value = data.title;
+        descEl.value = data.description;
+      }
+    }
+
+    // Submit form
+    document.getElementById("menuForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const item = {
+        title: titleEl.value,
+        description: descEl.value,
+      };
+
+      // Upload image if provided
+      if (imageFile.files.length > 0) {
+        const file = imageFile.files[0];
+        const imgRef = ref(storage, "menu_images/" + Date.now() + "_" + file.name);
+
+        await uploadBytes(imgRef, file);
+        const downloadURL = await getDownloadURL(imgRef);
+
+        item.image = downloadURL;
+      }
+
+      // Save to Firestore
+      await setDoc(
+        editId ? doc(db, "menu", editId) : doc(db, "menu", Date.now().toString()),
+        item,
+        { merge: true }
+      );
+
+      alert("Saved successfully!");
+      window.location.href = "dashboard.html";
+    });
+
+    window.goBack = function () {
+      window.location.href = "dashboard.html";
+    };
+  </script>
+
+</body>
+</html>
