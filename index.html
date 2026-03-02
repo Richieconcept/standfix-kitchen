@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Scout Bootstrap Template</title>
+  <title>UDEH & IHENYEN LAW FIRM</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/standfix logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/law.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -36,69 +36,156 @@
   ======================================================== -->
 </head>
 
-<body class="index-page">
+<!-- Premium Booking Modal Start -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content luxury-modal">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title luxury-title">Schedule a Legal Consultation</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/standfix logo (1).png" alt="">
-        <!-- <h1 class="sitename">Scout</h1> -->
-      </a>
+      <div class="modal-body pt-0">
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <p class="luxury-subtitle text-center mb-4">
+          Speak with our legal team for strategic advisory, litigation, regulatory compliance, or corporate representation.
+        </p>
 
-      <a class="btn-getstarted" href="index.html#contact">Get Started</a>
+        <form action="contact.php" method="post" class="php-email-form luxury-form">
+
+          <div class="row">
+            <div class="col-md-6 form-group mb-3">
+              <input type="text" name="name" class="form-control luxury-input" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6 form-group mb-3">
+              <input type="email" name="email" class="form-control luxury-input" placeholder="Email Address" required>
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <input type="text" name="subject" class="form-control luxury-input" placeholder="Subject (Corporate Advisory / Litigation / Regulatory Compliance)" required>
+          </div>
+
+          <div class="form-group mb-4">
+            <textarea name="message" rows="4" class="form-control luxury-input" placeholder="Briefly describe your legal enquiry..." required></textarea>
+          </div>
+
+          <div class="my-3">
+            <div class="loading text-center">Processing...</div>
+            <div class="error-message text-center text-danger"></div>
+            <div class="sent-message text-center text-success">
+              Your consultation request has been received. Our team will contact you shortly.
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn luxury-btn px-5 py-3">
+              Schedule Consultation
+            </button>
+          </div>
+
+        </form>
+
+      </div>
 
     </div>
-  </header>
+  </div>
+</div>
+<!-- Premium Booking Modal End -->
 
-  <main class="main">
 
 
 
-    <!-- Hero Section -->
+
+<body class="index-page">
+<header id="header" class="header d-flex align-items-center sticky-top">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <img src="assets/img/hide.png" alt="UDEH & IHENYEN LAW FIRM">
+    </a>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Practice Areas</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
+
+    <a class="btn-getstarted" href="index.html#contact">Schedule Consultation</a>
+
+  </div>
+</header>
+
+<main class="main">
+
+<!-- Hero Section -->
 <section id="hero" class="hero section dark-background">
   <div class="container" data-aos="fade-up">
     <div class="row align-items-center">
-      
+
       <div class="col-lg-6">
         <div class="hero-content" data-aos="fade-up" data-aos-delay="100">
-          
+
           <div class="hero-tag">
-            <i class="bi bi-basket"></i>
-            <span>Fresh. Reliable. Delicious.</span>
+            <i class="bi bi-building"></i>
+            <span>Corporate Advisory • Litigation • Regulatory Compliance</span>
           </div>
 
-          <h1>Quality <span class="highlight">Catering Services</span>
-            <span class="typed"></span>
+          <h1>
+            Strategic Legal Solutions for
+            <span class="typed" style="color: #D4AF37;"></span>
           </h1>
 
+          <!-- Typing Animation -->
+          <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              new Typed('.typed', {
+                strings: [
+                  "Corporate Institutions",
+                  "Financial Sector Clients",
+                  "Businesses & Investors",
+                  "Dispute Resolution"
+                ],
+                typeSpeed: 70,
+                backSpeed: 40,
+                backDelay: 2000,
+                loop: true
+              });
+            });
+          </script>
+
           <p class="lead">
-            <strong>Standfix Kitchen</strong> delivers exceptional indoor and outdoor catering, food packaging, 
-            preservation services, and supply of all kinds of food items. We serve fresh, hygienic, 
-            and professionally prepared meals for homes, offices, events, and daily needs.
+            <strong>UDEH & IHENYEN LAW FIRM</strong> is a full-service legal practice based in Benin City, Edo State,
+            delivering practical, innovative, and result-driven legal services across Nigeria.
+            
+            
           </p>
 
           <ul class="hero-features">
-            <li><i class="bi bi-check-circle"></i> Indoor & Outdoor Catering Services</li>
-            <li><i class="bi bi-check-circle"></i> Food Packaging & Branding Solutions</li>
-            <li><i class="bi bi-check-circle"></i> Foodstuff Supply & Preservation Services</li>
-            <li><i class="bi bi-check-circle"></i> Rental Services & General Merchant</li>
+            <li><i class="bi bi-check-circle"></i> Corporate & Commercial Law</li>
+            <li><i class="bi bi-check-circle"></i> Banking & Financial Services Law</li>
+            <li><i class="bi bi-check-circle"></i> Litigation & Dispute Resolution</li>
+            <li><i class="bi bi-check-circle"></i> Property & Real Estate Law</li>
+            <li><i class="bi bi-check-circle"></i> Intellectual Property & ICT Law</li>
           </ul>
 
           <div class="hero-cta">
-            <a href="#services" class="btn btn-primary">Explore Our Services</a>
-            <a href="tel:+2348033096053" class="btn btn-link"><i class="bi bi-telephone"></i> 0803 309 6053</a>
+
+           <a class="btn btn-primary py-3 px-4 px-md-5 ms-2" 
+              data-bs-toggle="modal" 
+              data-bs-target="#bookingModal">
+              Request Consultation
+           </a>
+
+            <a href="tel:+2348039176126" class="btn btn-link">
+              <i class="bi bi-telephone"></i> 08039176126
+            </a>
           </div>
 
         </div>
@@ -106,21 +193,21 @@
 
       <div class="col-lg-6">
         <div class="hero-image-wrapper" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/img/catering1..jpeg" alt="Standfix Kitchen" class="img-fluid hero-image">
+          <img src="assets/img/kk.png" class="img-fluid hero-image">
 
           <div class="stat-card top-right">
-            <div class="stat-value">10+</div>
-            <div class="stat-label">Years Experience</div>
+            <div class="stat-value">Trusted</div>
+            <div class="stat-label">Legal Advisory & Representation</div>
             <div class="stat-icon">
               <i class="bi bi-award"></i>
             </div>
           </div>
 
           <div class="stat-card bottom-left">
-            <div class="stat-value">1000+</div>
-            <div class="stat-label">Happy Clients</div>
+            <div class="stat-value">Full-Service</div>
+            <div class="stat-label">Corporate • Financial • Litigation • Property Law</div>
             <div class="stat-icon">
-              <i class="bi bi-hand-thumbs-up"></i>
+              <i class="bi bi-house-check"></i>
             </div>
           </div>
 
@@ -131,7 +218,6 @@
   </div>
 </section>
 <!-- /Hero Section -->
-
 <!-- About Section -->
 <section id="about" class="about section">
 
@@ -139,10 +225,12 @@
 
     <div class="row justify-content-center mb-5">
       <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="200">
-        <h2 class="section-heading">Our Vision, Mission &amp; Core Values</h2>
+        <h2 class="section-heading">Our Vision, Mission &amp; Core Philosophy</h2>
         <p class="lead">
-          At <strong>Standfix Kitchen</strong>, we are dedicated to delivering unforgettable culinary experiences —
-          from indoor meals to full outdoor event catering — crafted with flavour, hygiene, and professionalism.
+          At <strong>UDEH & IHENYEN LAW FIRM</strong>, we are committed to delivering
+          high-quality legal services anchored on diligence, integrity, and innovation.
+          We provide strategic legal advisory and competent representation to clients
+          across the public and private sectors in Nigeria.
         </p>
       </div>
     </div>
@@ -156,8 +244,9 @@
           </div>
           <h4>Our Vision</h4>
           <p>
-            To become a leading catering brand known for exceptional taste, flawless presentation,
-            and seamless service delivery—creating memorable dining experiences for every occasion.
+            To be a leading legal service provider in Nigeria,
+            recognized for excellence, trust, and strategic problem-solving
+            across corporate, financial, and regulatory sectors.
           </p>
         </div>
       </div>
@@ -170,8 +259,9 @@
           </div>
           <h4>Our Mission</h4>
           <p>
-            To provide fresh, delicious, and hygienically prepared meals for homes, offices, and events—
-            offering reliable indoor and outdoor catering solutions that exceed client expectations.
+            To deliver high-quality legal services through strategic advisory,
+            regulatory insight, and effective representation,
+            ensuring measurable and result-driven outcomes for our clients.
           </p>
         </div>
       </div>
@@ -184,8 +274,9 @@
           </div>
           <h4>Our Core Values</h4>
           <p>
-            We uphold Excellence, Hygiene, Professionalism, Creativity, and Customer Satisfaction—
-            values that guide every meal we prepare and every event we serve.
+            Diligence, Integrity, Professional Excellence, Innovation,
+            Strategic Thinking, and Client Commitment guide every engagement
+            at UDEH & IHENYEN LAW FIRM.
           </p>
         </div>
       </div>
@@ -194,27 +285,32 @@
     <div class="row align-items-center about-showcase">
       <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-delay="300">
         <div class="about-image-grid">
-          <img src="assets/img/ful-food.jpeg" class="img-grid-main" alt="Standfix Kitchen showcase">
-          <img src="assets/img//egg.jpg" class="img-grid-secondary" alt="Standfix Kitchen team">
-          <img src="assets/img/meet.jpg" class="img-grid-tertiary" alt="Standfix Kitchen meals and services">
+          <img src="assets/img/download (15).jfif" class="img-grid-main" alt="Corporate legal advisory services">
+          <img src="assets/img/download (14).jfif" class="img-grid-secondary" alt="Litigation and dispute resolution">
+          <img src="assets/img/image-hero.jpeg" class="img-grid-tertiary" alt="Regulatory compliance and representation">
           <div class="experience-badge" data-aos="zoom-in" data-aos-delay="500">
-            <span class="years">10+</span>
-            <span class="text">Years of Excellence</span>
+            <span class="years">Full-Service</span>
+            <span class="text">Corporate • Financial • Litigation • Regulatory Law</span>
           </div>
         </div>
       </div>
 
       <div class="col-lg-6 order-lg-1" data-aos="fade-right" data-aos-delay="200">
         <div class="about-content-box">
-          <h3>Fresh Meals, Premium Service</h3>
+          <h3>Strategic Legal Advisory & Representation</h3>
           <p class="mb-4">
-            At <strong>Standfix Kitchen</strong>, we combine culinary expertise with professional service —
-            offering delicious meals and outstanding indoor & outdoor catering for homes, offices, and events.
+            <strong>UDEH & IHENYEN LAW FIRM</strong> was founded by
+            Chukwudi Udeh, Esq. and Ikhuemoise Ihenyen, Esq.,
+            both seasoned legal practitioners with extensive experience in corporate advisory,
+            financial-sector representation, litigation, and regulatory compliance.
+            Strategically located at 87, New Lagos Road, Benin City, Edo State,
+            the Firm is positioned to provide tailored legal solutions
+            that align with institutional objectives and business growth strategies.
           </p>
 
           <div class="progress-item">
             <div class="d-flex justify-content-between">
-              <span class="progress-title">Quality Food & Hygiene</span>
+              <span class="progress-title">Regulatory & Compliance Advisory</span>
               <span class="progress-percent">98%</span>
             </div>
             <div class="progress">
@@ -224,7 +320,7 @@
 
           <div class="progress-item">
             <div class="d-flex justify-content-between">
-              <span class="progress-title">Client Satisfaction</span>
+              <span class="progress-title">Litigation & Dispute Resolution</span>
               <span class="progress-percent">95%</span>
             </div>
             <div class="progress">
@@ -232,7 +328,7 @@
             </div>
           </div>
 
-          <a href="#contact" class="btn btn-discover mt-4">Order Now!</a>
+          <a href="#contact" class="btn btn-discover mt-4">Consult With Our Team</a>
         </div>
       </div>
     </div>
@@ -241,6 +337,103 @@
 
 </section>
 <!-- /About Section -->
+
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="why-choose-us section dark-overlay">
+
+  <div class="overlay"></div>
+
+  <div class="container position-relative" data-aos="fade-up">
+
+    <div class="row justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <span class="section-tag text-uppercase">Why Choose Us</span>
+        <h2>Strategic Legal Excellence You Can Trust.</h2>
+        <p class="lead">
+          UDEH & IHENYEN LAW FIRM provides strategic, result-driven legal services
+          grounded in regulatory expertise, courtroom experience, and a strong
+          understanding of Nigeria’s corporate and financial landscape.
+          We are committed to delivering measurable outcomes with professionalism and integrity.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="why-card">
+          <i class="bi bi-briefcase"></i>
+          <h4>Strategic Corporate Advisory</h4>
+          <p>
+            Tailored legal solutions designed to support corporate governance,
+            compliance, and long-term business objectives.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="why-card">
+          <i class="bi bi-bank"></i>
+          <h4>Financial & Regulatory Insight</h4>
+          <p>
+            Deep understanding of Nigeria’s financial regulations,
+            banking laws, and institutional compliance frameworks.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="why-card">
+          <i class="bi bi-shield-check"></i>
+          <h4>Experienced Representation</h4>
+          <p>
+            Competent advocacy and representation before courts,
+            tribunals, and alternative dispute resolution platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="why-card">
+          <i class="bi bi-people"></i>
+          <h4>Client-Centered Approach</h4>
+          <p>
+            Transparent communication, proactive advisory,
+            and responsive legal support at every stage of engagement.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="why-card">
+          <i class="bi bi-building"></i>
+          <h4>Institutional Capacity</h4>
+          <p>
+            Well-positioned to support institutions such as the Central Bank of Nigeria
+            and other regulatory bodies with sound legal advisory.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="why-card">
+          <i class="bi bi-award"></i>
+          <h4>Result-Oriented Solutions</h4>
+          <p>
+            Focused on delivering timely, strategic, and practical legal outcomes
+            that align with client objectives.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- /Why Choose Us Section -->
+
 
 
 <!-- Stats Section -->
@@ -252,10 +445,11 @@
 
       <div class="col-lg-6 col-md-12">
         <div class="stats-overview text-center text-lg-start" data-aos="fade-right" data-aos-delay="200">
-          <h3>Trusted by Families, Loved by Event Hosts</h3>
+          <h3>Delivering Strategic Legal Solutions Across Nigeria</h3>
           <p>
-            Our growth reflects our commitment to excellent meals, seamless service, and unforgettable catering 
-            experiences for indoor dining, corporate orders, and outdoor events of every size.
+            Our growth reflects our commitment to corporate advisory, financial-sector representation,
+            regulatory compliance, and effective dispute resolution. At UDEH & IHENYEN LAW FIRM,
+            we focus on diligence, strategic thinking, and measurable legal outcomes.
           </p>
         </div>
       </div>
@@ -265,49 +459,49 @@
 
           <div class="stats-card">
             <div class="stats-icon">
-              <i class="bi bi-people-fill"></i>
-            </div>
-            <div class="stats-content">
-              <div class="stats-number">
-                <span data-purecounter-start="0" data-purecounter-end="2500" data-purecounter-duration="1" class="purecounter"></span><span class="plus">+</span>
-              </div>
-              <p>Happy Clients Served</p>
-            </div>
-          </div>
-
-          <div class="stats-card">
-            <div class="stats-icon">
               <i class="bi bi-building-check"></i>
-            </div>
-            <div class="stats-content">
-              <div class="stats-number">
-                <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span><span class="plus">+</span>
-              </div>
-              <p>Successful Events Catered</p>
-            </div>
-          </div>
-
-          <div class="stats-card">
-            <div class="stats-icon">
-              <i class="bi bi-house-heart-fill"></i>
             </div>
             <div class="stats-content">
               <div class="stats-number">
                 <span data-purecounter-start="0" data-purecounter-end="120" data-purecounter-duration="1" class="purecounter"></span><span class="plus">+</span>
               </div>
-              <p>Daily Meal Orders</p>
+              <p>Corporate & Institutional Clients Advised</p>
             </div>
           </div>
 
           <div class="stats-card">
             <div class="stats-icon">
-              <i class="bi bi-person-workspace"></i>
+              <i class="bi bi-shield-check"></i>
             </div>
             <div class="stats-content">
               <div class="stats-number">
-                <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span><span class="plus">+</span>
+                <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span><span class="plus">+</span>
               </div>
-              <p>Dedicated Kitchen & Service Staff</p>
+              <p>Litigation & Dispute Matters Handled</p>
+            </div>
+          </div>
+
+          <div class="stats-card">
+            <div class="stats-icon">
+              <i class="bi bi-bank"></i>
+            </div>
+            <div class="stats-content">
+              <div class="stats-number">
+                <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="1" class="purecounter"></span><span class="plus">+</span>
+              </div>
+              <p>Financial & Regulatory Advisory Engagements</p>
+            </div>
+          </div>
+
+          <div class="stats-card">
+            <div class="stats-icon">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="stats-content">
+              <div class="stats-number">
+                <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span><span class="plus">+</span>
+              </div>
+              <p>Dedicated Legal Professionals</p>
             </div>
           </div>
 
@@ -327,8 +521,12 @@
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Our Services</h2>
-    <p>We provide delicious meals and premium catering services for homes, offices, and all event types — both indoor and outdoor.</p>
+    <h2>Our Practice Areas</h2>
+    <p>
+      We provide comprehensive legal services across corporate, commercial,
+      financial, property, and intellectual property sectors,
+      delivering strategic and result-oriented legal support.
+    </p>
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -337,20 +535,21 @@
       <div class="row">
         <div class="col-lg-4">
           <div class="services-headline" data-aos="fade-up">
-            <p class="services-subtitle">What We Offer</p>
-            <h2 class="services-title">Delicious Food, Seamless Catering</h2>
+            <p class="services-subtitle">What We Do</p>
+            <h2 class="services-title">Full-Service Legal Advisory & Representation</h2>
           </div>
 
           <div class="services-description" data-aos="fade-up" data-aos-delay="100">
             <p>
-              At <strong>Standfix Kitchen</strong>, we specialise in preparing fresh, flavourful meals and providing full catering solutions for private,
-              corporate, and social events — ensuring professional service and unmatched taste.
+              At <strong>UDEH & IHENYEN LAW FIRM</strong>, we combine legal expertise,
+              regulatory insight, and courtroom experience to provide strategic solutions
+              tailored to institutional and business objectives across Nigeria.
             </p>
           </div>
 
           <div class="services-image-container" data-aos="fade-up" data-aos-delay="200">
             <div class="services-image">
-              <img src="assets/img/group with hand.jpg" alt="Catering Service" class="img-fluid">
+              <img src="assets/img/legal service.jfif" alt="Legal Advisory Services" class="img-fluid">
             </div>
           </div>
         </div>
@@ -364,13 +563,13 @@
                 <div class="service-card">
                   <div class="service-content text-center">
                     <div class="service-icon">
-                      <i class="bi bi-house-gear"></i>
+                      <i class="bi bi-briefcase"></i>
                     </div>
                     <div class="service-info">
-                      <h3>Indoor & Outdoor Catering</h3>
+                      <h3>Corporate & Commercial Law</h3>
                       <p>
-                        From intimate gatherings to large outdoor celebrations, we deliver excellent catering with delicious meals, 
-                        organised serving, and professional hospitality.
+                        Corporate structuring, governance advisory,
+                        contract drafting, compliance, and transactional support.
                       </p>
                     </div>
                   </div>
@@ -382,13 +581,13 @@
                 <div class="service-card">
                   <div class="service-content text-center">
                     <div class="service-icon">
-                      <i class="bi bi-bricks"></i>
+                      <i class="bi bi-bank"></i>
                     </div>
                     <div class="service-info">
-                      <h3>Event Catering Services</h3>
+                      <h3>Banking & Financial Services Law</h3>
                       <p>
-                        Weddings, birthdays, corporate meetings, church programs, school events — we provide customized menus and 
-                        full catering setups that elevate every event.
+                        Regulatory advisory, financial-sector compliance,
+                        and institutional representation aligned with Nigerian laws.
                       </p>
                     </div>
                   </div>
@@ -400,13 +599,13 @@
                 <div class="service-card">
                   <div class="service-content text-center">
                     <div class="service-icon">
-                      <i class="bi bi-key"></i>
+                      <i class="bi bi-shield-check"></i>
                     </div>
                     <div class="service-info">
-                      <h3>Daily Meal Delivery</h3>
+                      <h3>Litigation & Dispute Resolution</h3>
                       <p>
-                        Fresh home-style meals delivered to individuals, families, and offices — perfect for busy professionals, 
-                        students, and organisations who want healthy convenience.
+                        Strategic representation before courts and tribunals,
+                        including arbitration, mediation, and commercial disputes.
                       </p>
                     </div>
                   </div>
@@ -418,13 +617,13 @@
                 <div class="service-card">
                   <div class="service-content text-center">
                     <div class="service-icon">
-                      <i class="bi bi-tools"></i>
+                      <i class="bi bi-house-check"></i>
                     </div>
                     <div class="service-info">
-                      <h3>Bulk Food Orders</h3>
+                      <h3>Property & Intellectual Property Law</h3>
                       <p>
-                        We prepare bulk orders for parties, offices, schools, seminars, and special events — including rice dishes, soups, grills, 
-                        pastries, small chops, and more.
+                        Real estate transactions, title verification,
+                        intellectual property protection, and ICT-related advisory services.
                       </p>
                     </div>
                   </div>
@@ -440,14 +639,13 @@
 </section>
 <!-- /Services Section -->
 
-
 <!-- Testimonials Section -->
 <section id="testimonials" class="testimonials section">
 
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2>What Our Clients Say</h2>
-    <p>Real feedback from families, event hosts, and organisations who have enjoyed Standfix Kitchen’s meals and services.</p>
+    <p>Professional feedback from institutions, corporate clients, and individuals we have represented.</p>
   </div><!-- End Section Title -->
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -465,13 +663,14 @@
             <i class="bi bi-star-fill"></i>
           </div>
           <p>
-            Standfix Kitchen handled my mother’s birthday perfectly. The food was delicious, well-packaged, and served hot. Every guest kept asking for their contact!
+            The Firm provided exceptional corporate advisory support during our restructuring process.
+            Their legal insight and professionalism were instrumental to our success.
           </p>
           <div class="testimonial-footer">
             <div class="testimonial-author">
               <div>
-                <h5>Amaka Johnson</h5>
-                <span>Birthday Event, Lagos</span>
+                <h5>Corporate Executive</h5>
+                <span>Financial Services Sector</span>
               </div>
             </div>
             <div class="quote-icon">
@@ -479,7 +678,7 @@
             </div>
           </div>
         </div>
-      </div><!-- End Testimonial Item -->
+      </div>
 
       <!-- Testimonial Item 2 -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
@@ -492,13 +691,14 @@
             <i class="bi bi-star-fill"></i>
           </div>
           <p>
-            They catered our office end-of-year party and it was flawless. Great food variety, fast delivery, and professional service. Highly recommended!
+            Their litigation strategy was thorough, precise, and highly effective.
+            We felt confident throughout the entire court process.
           </p>
           <div class="testimonial-footer">
             <div class="testimonial-author">
               <div>
-                <h5>Mr. Daniel Peters</h5>
-                <span>Corporate Client, Abuja</span>
+                <h5>Business Owner</h5>
+                <span>Commercial Dispute Client</span>
               </div>
             </div>
             <div class="quote-icon">
@@ -506,7 +706,7 @@
             </div>
           </div>
         </div>
-      </div><!-- End Testimonial Item -->
+      </div>
 
       <!-- Testimonial Item 3 -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
@@ -519,13 +719,14 @@
             <i class="bi bi-star-fill"></i>
           </div>
           <p>
-            Their jollof, peppered chicken and small chops were the highlight of our outdoor event. Standfix Kitchen brought flavour, order, and outstanding service.
+            The team demonstrated deep regulatory knowledge and provided practical solutions
+            that aligned with our institutional compliance requirements.
           </p>
           <div class="testimonial-footer">
             <div class="testimonial-author">
               <div>
-                <h5>Faith Olanrewaju</h5>
-                <span>Outdoor Party, Ibadan</span>
+                <h5>Compliance Director</h5>
+                <span>Regulated Institution</span>
               </div>
             </div>
             <div class="quote-icon">
@@ -533,7 +734,7 @@
             </div>
           </div>
         </div>
-      </div><!-- End Testimonial Item -->
+      </div>
 
       <!-- Testimonial Item 4 -->
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
@@ -546,13 +747,14 @@
             <i class="bi bi-star-fill"></i>
           </div>
           <p>
-            I use Standfix Kitchen for weekly home meal delivery. The food is always fresh, generous, and neatly packaged. They’ve made my busy schedule easier.
+            We received timely, transparent, and strategic legal advice.
+            Their client-focused approach truly sets them apart.
           </p>
           <div class="testimonial-footer">
             <div class="testimonial-author">
               <div>
-                <h5>Blessing Eze</h5>
-                <span>Weekly Meal Plan Client, Port Harcourt</span>
+                <h5>Entrepreneur</h5>
+                <span>Private Client</span>
               </div>
             </div>
             <div class="quote-icon">
@@ -560,61 +762,7 @@
             </div>
           </div>
         </div>
-      </div><!-- End Testimonial Item -->
-
-      <!-- Testimonial Item 5 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-        <div class="testimonial-item">
-          <div class="stars">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-          </div>
-          <p>
-            Professional, punctual, and extremely delicious food. They handled our wedding catering and everything was smooth — from setup to serving.
-          </p>
-          <div class="testimonial-footer">
-            <div class="testimonial-author">
-              <div>
-                <h5>Kunle & Mary</h5>
-                <span>Wedding Event, Ogun State</span>
-              </div>
-            </div>
-            <div class="quote-icon">
-              <i class="bi bi-quote"></i>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Testimonial Item -->
-
-      <!-- Testimonial Item 6 -->
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-        <div class="testimonial-item">
-          <div class="stars">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-          </div>
-          <p>
-            Standfix Kitchen delivers excellence every time. Their meals taste like home, their service is warm, and their professionalism is top-notch.
-          </p>
-          <div class="testimonial-footer">
-            <div class="testimonial-author">
-              <div>
-                <h5>Ngozi Chukwu</h5>
-                <span>Repeat Client, Enugu</span>
-              </div>
-            </div>
-            <div class="quote-icon">
-              <i class="bi bi-quote"></i>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Testimonial Item -->
+      </div>
 
     </div>
 
@@ -622,7 +770,6 @@
 
 </section>
 <!-- /Testimonials Section -->
-
 
 
 <!-- Call To Action Section -->
@@ -633,44 +780,44 @@
     <div class="advertise-1 d-flex flex-column flex-lg-row gap-4 align-items-center position-relative">
 
       <div class="content-left flex-grow-1" data-aos="fade-right" data-aos-delay="200">
-        <span class="badge text-uppercase mb-2">Delicious Meals. Anytime.</span>
-        <h2>Enjoy Fresh, Perfectly Cooked Meals for Every Occasion</h2>
+        <span class="badge text-uppercase mb-2">Strategic Legal Advisory</span>
+        <h2>Partner With A Law Firm That Delivers Results</h2>
         <p class="my-4">
-          At <strong>Standfix Kitchen</strong>, we prepare delicious indoor and outdoor meals —
-          fresh, hygienic, flavour-rich and beautifully presented. Whether it's home delivery,
-          buffet catering, office lunch, or private events, we bring taste and quality to your table.
+          At <strong>UDEH & IHENYEN LAW FIRM</strong>, we provide strategic corporate advisory,
+          regulatory compliance support, litigation representation, and financial-sector legal services.
+          Let us support your institution or business with professionalism, diligence, and integrity.
         </p>
 
         <div class="features d-flex flex-wrap gap-3 mb-4">
           <div class="feature-item">
             <i class="bi bi-check-circle-fill"></i>
-            <span>Fresh & Hygienic Cooking</span>
+            <span>Corporate & Commercial Advisory</span>
           </div>
           <div class="feature-item">
             <i class="bi bi-check-circle-fill"></i>
-            <span>Fast Delivery & On-Time Service</span>
+            <span>Litigation & Dispute Resolution</span>
           </div>
           <div class="feature-item">
             <i class="bi bi-check-circle-fill"></i>
-            <span>Affordable Catering Packages</span>
+            <span>Regulatory & Financial Sector Support</span>
           </div>
         </div>
 
         <div class="cta-buttons d-flex flex-wrap gap-3">
-          <a href="#contact" class="btn btn-primary">Book Us for Catering</a>
-          <a href="#services" class="btn btn-outline">Browse Our Menu</a>
+          <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+          <a href="#services" class="btn btn-outline">View Practice Areas</a>
         </div>
       </div>
 
       <div class="content-right position-relative" data-aos="fade-left" data-aos-delay="300">
-        <img src="assets/img/food1.jpg" alt="Standfix Kitchen Catering" class="img-fluid rounded-4 ">
+        <img src="assets/img/Foto habitación hotel.jfif" alt="Legal Advisory Services" class="img-fluid rounded-4">
         <div class="floating-card">
           <div class="card-icon">
-            <i class="bi bi-emoji-heart-eyes"></i>
+            <i class="bi bi-award"></i>
           </div>
           <div class="card-content">
-            <span class="stats-number">98%</span>
-            <span class="stats-text">Customer Satisfaction</span>
+            <span class="stats-number">Trusted</span>
+            <span class="stats-text">Professional Legal Representation</span>
           </div>
         </div>
       </div>
@@ -689,409 +836,283 @@
 
 
 
+<!-- About Us Section -->
+<section id="about-us" class="about-us section">
+  <div class="container" data-aos="fade-up">
 
+    <div class="row align-items-center">
 
-<!-- menus -->
-
-<section id="menu" class="menu-section">
-  <h2 class="text-center">Our Menu</h2>
-  <p class="text-center">Delicious meals prepared fresh daily</p>
-
-  <div id="menuList" class="menu-grid"></div>
-</section>
-
-
-
-
-
-
-<!-- How We Work Section -->
-<section id="how-we-work" class="how-we-work section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>How We Work</h2>
-    <p>At Standfix Kitchen, we make meal ordering and catering stress-free, seamless, and reliable — whether it’s indoor meals, outdoor events, or full-service catering.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="steps-wrapper">
-
-      <!-- Step 1 -->
-      <div class="step-item" data-aos="fade-right" data-aos-delay="200">
-        <div class="step-content">
-          <div class="step-icon">
-            <i class="bi bi-lightbulb"></i>
-          </div>
-          <div class="step-info">
-            <span class="step-number">Step 01</span>
-            <h3>Share Your Food Request</h3>
-            <p>Tell us your meal needs — event size, preferred menu, budget, or daily food plan.
-               We help you choose the best options tailored to your taste and occasion.</p>
-          </div>
+      <!-- Image Column (Left) -->
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+        <div class="about-image">
+          <img src="assets/img/download (15).jfif" alt="UDEH & IHENYEN LAW FIRM" class="img-fluid rounded">
         </div>
-      </div><!-- End Step Item -->
-
-      <!-- Step 2 -->
-      <div class="step-item" data-aos="fade-left" data-aos-delay="300">
-        <div class="step-content">
-          <div class="step-icon">
-            <i class="bi bi-gear"></i>
-          </div>
-          <div class="step-info">
-            <span class="step-number">Step 02</span>
-            <h3>Menu Planning & Confirmation</h3>
-            <p>We work with you to finalize the menu — soups, stews, local dishes, continental meals,
-               grilled foods, small chops, or full buffet catering. Everything is planned to perfection.</p>
-          </div>
-        </div>
-      </div><!-- End Step Item -->
-
-      <!-- Step 3 -->
-      <div class="step-item" data-aos="fade-right" data-aos-delay="400">
-        <div class="step-content">
-          <div class="step-icon">
-            <i class="bi bi-bricks"></i>
-          </div>
-          <div class="step-info">
-            <span class="step-number">Step 03</span>
-            <h3>Fresh & Professional Meal Preparation</h3>
-            <p>Your meals are cooked fresh, same-day, in a clean environment using quality ingredients.
-               Every dish is prepared with care to deliver great taste and consistency.</p>
-          </div>
-        </div>
-      </div><!-- End Step Item -->
-
-      <!-- Step 4 -->
-      <div class="step-item" data-aos="fade-left" data-aos-delay="500">
-        <div class="step-content">
-          <div class="step-icon">
-            <i class="bi bi-truck"></i>
-          </div>
-          <div class="step-info">
-            <span class="step-number">Step 04</span>
-            <h3>Delivery, Setup or Full Catering Service</h3>
-            <p>We deliver to your location, set up your serving area, or provide full event catering with
-               serving staff — whichever suits your needs. Just relax and enjoy the food.</p>
-          </div>
-        </div>
-      </div><!-- End Step Item -->
-
-    </div>
-
-  </div>
-
-</section>
-<!-- /How We Work Section -->
-
-
-
-<!-- FAQ Section -->
-<section id="faq" class="faq section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Frequently Asked Questions</h2>
-    <p>Here are some of the most common questions people ask about meal orders, event catering, pricing, and service support at Standfix Kitchen.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-
-        <div class="faq-tabs mb-5">
-          <ul class="nav nav-pills justify-content-center" id="faqTab" role="tablist">
-
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#faq-general" type="button" role="tab" aria-controls="general" aria-selected="true">
-                <i class="bi bi-question-circle me-2"></i>General
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pricing-tab" data-bs-toggle="pill" data-bs-target="#faq-pricing" type="button" role="tab" aria-controls="pricing" aria-selected="false">
-                <i class="bi bi-credit-card me-2"></i>Pricing
-              </button>
-            </li>
-
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="support-tab" data-bs-toggle="pill" data-bs-target="#faq-support" type="button" role="tab" aria-controls="support" aria-selected="false">
-                <i class="bi bi-headset me-2"></i>Support
-              </button>
-            </li>
-
-          </ul>
-        </div>
-
-        <div class="tab-content" id="faqTabContent">
-
-          <!-- General FAQs -->
-          <div class="tab-pane fade show active" id="faq-general" role="tabpanel" aria-labelledby="general-tab">
-            <div class="faq-list">
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                <h3>
-                  <span class="num">1</span>
-                  <span class="question">Do you offer both indoor and outdoor catering?</span>
-                  <i class="bi bi-plus-lg faq-toggle"></i>
-                </h3>
-                <div class="faq-content">
-                  <p>Yes, Standfix Kitchen caters for indoor dining, home meal delivery, small gatherings, and full outdoor events such as weddings, birthdays, corporate functions, church programs, and more.</p>
-                </div>
-              </div><!-- End FAQ Item -->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <h3>
-                  <span class="num">2</span>
-                  <span class="question">How early should I book for an event?</span>
-                  <i class="bi bi-plus-lg faq-toggle"></i>
-                </h3>
-                <div class="faq-content">
-                  <p>For small events, we recommend booking at least 3–5 days ahead.  
-                  For weddings, corporate events, and large outdoor catering, booking 2–4 weeks ahead ensures the best preparation and service.</p>
-                </div>
-              </div><!-- End FAQ Item -->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                <h3>
-                  <span class="num">3</span>
-                  <span class="question">Do you deliver daily meals?</span>
-                  <i class="bi bi-plus-lg faq-toggle"></i>
-                </h3>
-                <div class="faq-content">
-                  <p>Yes, we deliver freshly cooked home-style meals daily to homes, offices, students, and organisations. We also offer weekly subscription meal plans.</p>
-                </div>
-              </div><!-- End FAQ Item -->
-
-            </div>
-          </div><!-- End General Tab -->
-
-
-          <!-- Pricing FAQs -->
-          <div class="tab-pane fade" id="faq-pricing" role="tabpanel" aria-labelledby="pricing-tab">
-            <div class="faq-list">
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                <h3>
-                  <span class="num">1</span>
-                  <span class="question">What determines your catering prices?</span>
-                  <i class="bi bi-plus-lg faq-toggle"></i>
-                </h3>
-                <div class="faq-content">
-                  <p>Pricing depends on the menu selection, guest size, event location, serving style, and additional services such as ushers, buffet setup, decoration, and rentals (if required).</p>
-                </div>
-              </div><!-- End FAQ Item -->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <h3>
-                  <span class="num">2</span>
-                  <span class="question">Do you offer budget-friendly catering packages?</span>
-                  <i class="bi bi-plus-lg faq-toggle"></i>
-                </h3>
-                <div class="faq-content">
-                  <p>Yes, Standfix Kitchen provides flexible and affordable catering packages for different budgets — from simple meals to premium full-event setups.</p>
-                </div>
-              </div><!-- End FAQ Item -->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
-                <h3>
-                  <span class="num">3</span>
-                  <span class="question">Can I order in bulk for parties or offices?</span>
-                  <i class="bi bi-plus-lg faq-toggle"></i>
-                </h3>
-                <div class="faq-content">
-                  <p>Absolutely! We handle bulk food orders for offices, schools, seminars, parties, and all types of gatherings — including rice dishes, proteins, soups, grills, pastries, and small chops.</p>
-                </div>
-              </div><!-- End FAQ Item -->
-
-            </div>
-          </div><!-- End Pricing Tab -->
-
-
-          <!-- Support FAQs -->
-          <div class="tab-pane fade" id="faq-support" role="tabpanel" aria-labelledby="support-tab">
-            <div class="faq-list">
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                <h3>
-                  <span class="num">1</span>
-                  <span class="question">Do you handle serving and on-site support during events?</span>
-                  <i class="bi bi-plus-lg faq-toggle"></i>
-                </h3>
-                <div class="faq-content">
-                  <p>Yes, our team can provide full on-site support including professional servers, buffet arrangement, food warming setups, table service, and crowd management during events.</p>
-                </div>
-              </div><!-- End FAQ Item -->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <h3>
-                  <span class="num">2</span>
-                  <span class="question">How can I reach Standfix Kitchen for quick inquiries?</span>
-                  <i class="bi bi-plus-lg faq-toggle"></i>
-                </h3>
-                <div class="faq-content">
-                  <p>You can reach us through our contact form, WhatsApp, direct phone call, or any of our social pages. Our support team responds quickly to meal orders and event inquiries.</p>
-                </div>
-              </div><!-- End FAQ Item -->
-
-            </div>
-          </div><!-- End Support Tab -->
-
-        </div>
-
-        <div class="faq-cta text-center mt-5" data-aos="fade-up" data-aos-delay="300">
-          <p>Still have questions? We’re here to help!</p>
-          <a href="#contact" class="btn btn-primary">Contact Us</a>
-        </div>
-
       </div>
+
+      <!-- Content Column (Right) -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+        <div class="about-content">
+
+          <span class="section-tag">About Us</span>
+          <h2>Strategic Legal Advisory. Trusted Representation.</h2>
+
+          <p class="about-text">
+            <strong>UDEH & IHENYEN LAW FIRM</strong> is a fast-growing, full-service legal practice
+            based in Benin City, Edo State. Founded by Chukwudi Udeh, Esq. and Ikhuemoise Ihenyen, Esq.,
+            the Firm provides practical, innovative, and solution-driven legal services
+            to corporate institutions, regulated entities, and private clients across Nigeria.
+          </p>
+
+          <p class="about-text">
+            Our practice combines corporate advisory expertise, financial-sector insight,
+            litigation competence, and regulatory compliance support.
+            We are committed to delivering legal strategies that align with
+            organizational goals and institutional objectives.
+          </p>
+
+          <div class="about-features">
+
+            <div class="feature-item">
+              <div class="icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="feature-text">
+                <h5>Regulatory Expertise</h5>
+                <p>
+                  Strong understanding of Nigeria’s regulatory frameworks,
+                  particularly within the financial and corporate sectors.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="icon">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <div class="feature-text">
+                <h5>Corporate & Commercial Advisory</h5>
+                <p>
+                  Strategic legal support for corporate governance,
+                  compliance, and business transactions.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-item">
+              <div class="icon">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="feature-text">
+                <h5>Client-Centered Service</h5>
+                <p>
+                  Transparent communication, professional responsiveness,
+                  and proactive legal representation at every stage.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- /About Us Section -->
+
+
+<!-- Our Approach Section -->
+<section id="our-approach" class="our-approach section">
+
+  <div class="container position-relative" data-aos="fade-up">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-6 text-light" data-aos="fade-right" data-aos-delay="100">
+        <span class="section-tag text-uppercase">Our Legal Approach</span>
+        <h2>Diligence. Integrity. Strategic Solutions.</h2>
+
+        <p class="lead">
+          At <strong>UDEH & IHENYEN LAW FIRM</strong>, every engagement is guided
+          by professionalism, deep legal analysis, and a commitment to delivering
+          practical, result-oriented solutions. We focus on strategic thinking,
+          regulatory compliance, and effective representation.
+        </p>
+
+        <ul class="approach-list">
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            In-depth legal research and strategic case analysis
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Tailored advisory aligned with corporate and institutional goals
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Competent courtroom advocacy and dispute resolution
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill"></i>
+            Proactive regulatory and compliance support
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+        <!-- Optional empty column -->
+      </div>
+
     </div>
 
   </div>
 
 </section>
-<!-- /FAQ Section -->
+<!-- /Our Approach Section -->
 
-<!-- Call To Action Section -->
-<section id="call-to-action" class="call-to-action section light-background">
+
+<!-- Message From CEO Section -->
+<!--  
+<section id="ceo-message" class="call-to-action section light-background">
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="cta-wrapper">
       <div class="cta-content" data-aos="fade-right" data-aos-delay="200">
-        <h2>Delicious Meals. Professional Catering. Outstanding Service.</h2>
+        <h2>Message from the CEO</h2>
         <p>
-          At <strong>Standfix Kitchen</strong>, we serve flavour-packed meals, premium outdoor/indoor catering,
-          and professional food services that bring freshness, hygiene, and satisfaction to your home, office,
-          or event. Taste the magic today.
+          At <strong>K5 Hotel & Events Services Limited</strong>, our vision is to create
+          a hospitality environment where comfort meets luxury. We are dedicated to
+          delivering exceptional accommodation, quality dining, and memorable events
+          with professionalism and integrity.
         </p>
-        <div class="cta-buttons">
-          <a href="#contact" class="btn-primary">Book Our Catering</a>
-          <a href="#services" class="btn-outline">See Our Services</a>
-        </div>
+        <p>
+          Our team works tirelessly to ensure that every guest enjoys a seamless,
+          relaxing, and satisfying experience. We appreciate your trust and look
+          forward to welcoming you to K5 Hotel.
+        </p>
+        <p class="ceo-name">
+          <strong>Prince Salami S. Olayemi</strong><br>
+          <span>Managing Director / CEO, K5 Hotel & Events Services Limited</span>
+        </p>
       </div>
       <div class="cta-image" data-aos="fade-left" data-aos-delay="300">
-        <img src="assets/img/inter-con1.jpg" alt="Standfix Kitchen Food" class="img-fluid  plate">
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /Call To Action Section -->
-
-
-<!-- Team Section -->
-<!--  
-<section id="team" class="team section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Our Team</h2>
-    <p>Meet the passionate food professionals behind Standfix Kitchen.</p>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row">
-      <div class="col-lg-4 team-intro" data-aos="fade-right" data-aos-delay="200">
-        <div class="team-intro-content">
-          <h2>Meet Our Experts</h2>
-          <p>
-            Our chefs, event coordinators, and food service specialists work together to deliver delicious meals,
-            beautiful presentation, and seamless catering for every occasion.
-          </p>
-          <div class="team-navigation">
-            <button class="team-nav-prev"><i class="bi bi-arrow-left"></i></button>
-            <button class="team-nav-next"><i class="bi bi-arrow-right"></i></button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-8 team-carousel-wrap">
-        <div class="team-carousel swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 800,
-              "autoplay": { "delay": 5000 },
-              "slidesPerView": 1,
-              "spaceBetween": 20,
-              "navigation": {
-                "nextEl": ".team-nav-next",
-                "prevEl": ".team-nav-prev"
-              },
-              "breakpoints": {
-                "576": { "slidesPerView": 2, "spaceBetween": 20 },
-                "992": { "slidesPerView": 2, "spaceBetween": 30 }
-              }
-            }
-          </script>
-
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="member-card">
-                <div class="member-image">
-                  <img src="assets/img/person/person-f-1.webp" class="img-fluid" alt="CEO" loading="lazy">
-                </div>
-                <div class="member-info">
-                  <h3>MRS. EMEM ESSIEN</h3>
-                  <span>Chief Executive Officer (CEO)</span>
-                  <div class="member-bio">
-                    <p>Leads Standfix Kitchen with passion for quality food service, excellence, and customer satisfaction.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="member-card">
-                <div class="member-image">
-                  <img src="assets/img/person/person-m-4.webp" class="img-fluid" alt="Team Member">
-                </div>
-                <div class="member-info">
-                  <h3>Head of Catering Operations</h3>
-                  <span>Lead Chef</span>
-                  <div class="member-bio">
-                    <p>Ensures every meal served is fresh, hygienic, and crafted with premium ingredients.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="member-card">
-                <div class="member-image">
-                  <img src="assets/img/person/person-m-2.webp" class="img-fluid" alt="Team Member">
-                </div>
-                <div class="member-info">
-                  <h3>Event Logistics Manager</h3>
-                  <span>Catering Coordinator</span>
-                  <div class="member-bio">
-                    <p>Oversees smooth logistics for events, ensuring timely delivery and perfect service setup.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
+        <img src="assets/img/cei.jpeg" alt="CEO of K5 Hotel" class="img-fluid plate">
       </div>
     </div>
   </div>
 </section> -->
+
+
+
+
+<!-- ============================Our team========================================== -->
+
+
+
+<!-- Team Section -->
+<section id="team" class="team section light-background">
+
+  <div class="container" data-aos="fade-up">
+
+    <!-- Section Title -->
+    <div class="section-title text-center mb-5">
+      <h2>Our Leadership</h2>
+      <p>
+        Meet the founding partners of UDEH & IHENYEN LAW FIRM —
+        experienced legal professionals committed to excellence,
+        integrity, and strategic legal solutions.
+      </p>
+    </div>
+
+    <div class="row justify-content-center g-5">
+
+      <!-- Team Member 1 -->
+      <div class="col-lg-5 col-md-6">
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="team-image">
+            <img src="assets/img/chu.jpeg" alt="Chukwudi Udeh Esq." class="img-fluid">
+          </div>
+
+          <div class="team-content text-center">
+            <h4>Chukwudi Udeh, Esq.</h4>
+            <span class="position">Founding Partner</span>
+
+            <p>
+              A seasoned legal practitioner with extensive experience in
+              corporate advisory, financial-sector representation,
+              regulatory compliance, and litigation. He provides
+              strategic legal guidance tailored to institutional
+              and corporate objectives.
+            </p>
+
+            <div class="team-social">
+              <a href="mailto:chukwudi.udeh@udehandihenyen.com">
+                <i class="bi bi-envelope"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="col-lg-5 col-md-6">
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="team-image">
+            <img src="assets/img/ike.jpeg" alt="Ikhuemoise Ihenyen Esq." class="img-fluid">
+          </div>
+
+          <div class="team-content text-center">
+            <h4>Ikhuemoise Ihenyen, Esq.</h4>
+            <span class="position">Co-Founder</span>
+
+            <p>
+              An accomplished legal professional with strong expertise in
+              dispute resolution, corporate governance, and regulatory advisory.
+              He delivers practical and innovative legal solutions
+              across diverse sectors.
+            </p>
+
+            <div class="team-social">
+              <a href="mailto:ikhuemoise.ihenyen@udehandihenyen.com">
+                <i class="bi bi-envelope"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 <!-- /Team Section -->
-
-
 
 <!-- Contact Section -->
 <section id="contact" class="contact section">
   <div class="container section-title" data-aos="fade-up">
     <h2>Contact Us</h2>
-    <p>We’re ready to serve your home, office, or event. Reach out today.</p>
+    <p>Schedule a consultation or make a legal enquiry. Our team will respond promptly.</p>
   </div>
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <div class="contact-main-wrapper">
 
       <div class="map-wrapper">
-        <iframe src="https://www.google.com/maps?q=Rumuodara,+Port+Harcourt,+Nigeria&output=embed"
+        <iframe src="https://www.google.com/maps?q=87+New+Lagos+Road,+Benin+City,+Edo+State&output=embed"
           width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
 
@@ -1101,8 +1122,8 @@
           <div class="contact-card">
             <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
             <div class="contact-text">
-              <h4>Office Address</h4>
-              <p>No 4 Elioma Close, off East West Road, Rumuodara PH</p>
+              <h4>Address</h4>
+              <p>87, New Lagos Road, Benin City, Edo State, Nigeria</p>
             </div>
           </div>
 
@@ -1110,7 +1131,9 @@
             <div class="icon-box"><i class="bi bi-envelope"></i></div>
             <div class="contact-text">
               <h4>Email</h4>
-              <p>ememessien2411@gmail.com</p>
+              <p>_briefs@udehandihenyen.com</p>
+              <p>_chukwudi.udeh@udehandihenyen.com</p>
+              <p>_ikhuemoise.ihenyen@udehandihenyen.com</p>
             </div>
           </div>
 
@@ -1118,56 +1141,54 @@
             <div class="icon-box"><i class="bi bi-telephone"></i></div>
             <div class="contact-text">
               <h4>Phone</h4>
-              <p>08033096053, 08081518477</p>
+              <p>08039176126</p>
+              <p>08038671457</p>
             </div>
           </div>
 
           <div class="contact-card">
             <div class="icon-box"><i class="bi bi-clock"></i></div>
             <div class="contact-text">
-              <h4>Service Hours</h4>
-              <p>Monday – Sunday: 8AM – 8PM</p>
+              <h4>Office Hours</h4>
+              <p>Monday – Friday: 8:30 AM – 5:00 PM</p>
             </div>
           </div>
 
         </div>
 
-
         <!-- Contact Form -->
         <div class="contact-form-container" data-aos="fade-up" data-aos-delay="400">
-          <h3>Send Us a Message</h3>
-          <p>Place an order, request catering, or ask a question below.</p>
+          <h3>Send Us a Legal Enquiry</h3>
+          <p>Kindly provide brief details of your matter. We will respond confidentially.</p>
 
-          <form action="forms/contact.php" method="post" class="php-email-form">
+          <form action="contact.php" method="post" class="php-email-form">
             <div class="row">
               <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                <input type="text" name="name" class="form-control" placeholder="Full Name" required="">
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
               </div>
             </div>
 
             <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              <input type="text" class="form-control" name="subject" placeholder="Subject (Consultation / Corporate Advisory / Litigation / Property Matter)" required="">
             </div>
 
             <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message" required=""></textarea>
+              <textarea class="form-control" name="message" rows="5" placeholder="Briefly describe your legal matter..." required=""></textarea>
             </div>
 
             <div class="my-3">
-              <div class="loading">Loading...</div>
+              <div class="loading">Submitting...</div>
               <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
+              <div class="sent-message">Your enquiry has been sent successfully. We will contact you shortly.</div>
             </div>
 
             <div class="form-submit">
-              <button type="submit">Send Message</button>
+              <button type="submit">Submit Enquiry</button>
               <div class="social-links">
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </form>
@@ -1180,7 +1201,6 @@
 <!-- /Contact Section -->
 
 
-
 <!-- Footer Section -->
 <footer id="footer" class="footer position-relative light-background">
   <div class="container footer-top">
@@ -1188,19 +1208,17 @@
 
       <div class="col-lg-4 col-md-6 footer-about">
         <a href="index.html" class="logo d-flex align-items-center">
-          <img src="assets/img/logo-site.jpeg" alt="">
+          <img src="assets/img/logo.png" alt="UDEH & IHENYEN LAW FIRM">
         </a>
 
         <div class="footer-contact pt-3">
-          <p>No 4 Elioma Close, off East West Road, Rumuodara PH</p>
-          <p class="mt-3"><strong>Phone:</strong> <span>08033096053, 08081518477</span></p>
-          <p><strong>Email:</strong> <span>ememessien2411@gmail.com</span></p>
+          <p>87, New Lagos Road, Benin City, Edo State, Nigeria</p>
+          <p class="mt-3"><strong>Phone:</strong> <span>08039176126 | 08038671457</span></p>
+          <p><strong>Email:</strong> <span>_briefs@udehandihenyen.com</span></p>
         </div>
 
         <div class="social-links d-flex mt-4">
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
 
@@ -1208,31 +1226,31 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services">Practice Areas</a></li>
+          <li><a href="#team">Our Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
       <div class="col-lg-3 col-md-3 footer-links">
-        <h4>Our Services</h4>
+        <h4>Practice Areas</h4>
         <ul>
-          <li><a href="#">Outdoor / Indoor Catering</a></li>
-          <li><a href="#">Packaging & Branding</a></li>
-          <li><a href="#">Storage / Preservative Services</a></li>
-          <li><a href="#">Foodstuff Supply & Purchases</a></li>
-          <li><a href="#">Rental Services</a></li>
+          <li><a href="#">Corporate & Commercial Law</a></li>
+          <li><a href="#">Banking & Financial Services Law</a></li>
+          <li><a href="#">Litigation & Dispute Resolution</a></li>
+          <li><a href="#">Property & Real Estate Law</a></li>
+          <li><a href="#">Intellectual Property & ICT Law</a></li>
         </ul>
       </div>
 
       <div class="col-lg-3 col-md-3 footer-links">
-        <h4>Service Areas</h4>
+        <h4>Our Philosophy</h4>
         <ul>
-          <li><a href="#">Port Harcourt</a></li>
-          <li><a href="#">Lagos</a></li>
-          <li><a href="#">Abuja</a></li>
-          <li><a href="#">Owerri</a></li>
+          <li><a href="#">Diligence</a></li>
+          <li><a href="#">Integrity</a></li>
+          <li><a href="#">Innovation</a></li>
+          <li><a href="#">Strategic Problem-Solving</a></li>
         </ul>
       </div>
 
@@ -1241,7 +1259,7 @@
 
   <div class="container copyright text-center mt-4">
     <p>© <span>Copyright</span>
-      <strong class="px-1 sitename">Standfix Kitchen</strong>
+      <strong class="px-1 sitename">UDEH & IHENYEN LAW FIRM</strong>
       <span>All Rights Reserved</span>
     </p>
     <div class="credits">
@@ -1251,14 +1269,7 @@
 </footer>
 <!-- /Footer Section -->
 
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      </div>
-    </div>
 
-  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -1271,22 +1282,6 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Typing Animation -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    new Typed('.typed', {
-      strings: [
-         "you can trust always",
-        "for events of any size"   
-      ],
-      typeSpeed: 70,
-      backSpeed: 40,
-      backDelay: 2000,
-      loop: true
-    });
-  });
-</script>
 
 
 
