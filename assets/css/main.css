@@ -3220,6 +3220,10 @@ section,
 
 }
 
+.aboutimg{
+  object-position: top center;
+}
+
 /* Right content */
 .about-us .about-content {
   padding-left: 30px;
@@ -3288,6 +3292,8 @@ section,
   line-height: 1.6;
   margin: 0;
 }
+
+
 
 /* =========================
    RESPONSIVE
