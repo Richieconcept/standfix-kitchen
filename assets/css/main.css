@@ -3648,3 +3648,8 @@ section,
   background: #D4AF37;
   color: #fff;
 }
+
+.gold{
+  color: rgb(156, 131, 8);
+  font-weight: 800;
+}
